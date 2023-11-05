@@ -23,7 +23,7 @@ const parkImages = [
         caption: "Hay Butte Overlook. Photo: NPS, Ed Welsh.",
         name: "Badlands National Park",
         shortName: "Badlands",
-        states: "South",
+        states: "South Dakota",
         statesList: ["south-dakota"]
     },
     {
@@ -86,7 +86,7 @@ const parkImages = [
         caption: "Entrance to Carlsbad Caverns. Photo: NPS, Peter Jones.",
         name: "Carlsbad Caverns National Park",
         shortName: "Carlsbad Caverns",
-        states: "New",
+        states: "New Mexico",
         statesList: ["new-mexico"]
     },
     {
@@ -104,7 +104,7 @@ const parkImages = [
         caption: "Ranger led walk on the boardwalk. Photo: NPS.",
         name: "Congaree National Park",
         shortName: "Congaree",
-        states: "South",
+        states: "South Carolina",
         statesList: ["south-carolina"]
     },
     {
@@ -239,7 +239,7 @@ const parkImages = [
         caption: "Headstone in Cable Cemetery. Photo: NPS.",
         name: "Great Smoky Mountains National Park",
         shortName: "Great Smoky Mtns",
-        states: "North",
+        states: "North Carolina, Tennessee",
         statesList: ["north-carolina", "tennessee"]
     },
     {
@@ -383,7 +383,7 @@ const parkImages = [
         caption: "View from the Lower Sauma Ridge Trail. Photo: NPS.",
         name: "National Park of American Samoa",
         shortName: "American Samoa",
-        states: "American",
+        states: "American Samoa",
         statesList: ["american-samoa"]
     },
     {
@@ -392,7 +392,7 @@ const parkImages = [
         caption: "The Great Hall at Ellis Island. Photo: NPS.",
         name: "National Parks of New York Harbor",
         shortName: "New York Harbor",
-        states: "New",
+        states: "New York",
         statesList: ["new-york"]
     },
     {
@@ -401,7 +401,7 @@ const parkImages = [
         caption: "The Gorge in early autumn. Photo: NPS, Dave Bieri.",
         name: "New River Gorge National Park and Preserve",
         shortName: "New River Gorge",
-        states: "West",
+        states: "West Virginia",
         statesList: ["west-virginia"]
     },
     {
@@ -482,7 +482,7 @@ const parkImages = [
         caption: "The Loop Road in winter. Photo: NPS, Laura Thomas.",
         name: "Theodore Roosevelt National Park",
         shortName: "Theodore Roosevelt",
-        states: "North",
+        states: "North Dakota",
         statesList: ["north-dakota"]
     },
     {
@@ -509,7 +509,7 @@ const parkImages = [
         caption: "The curvy Dunes Drive. Photo: NPS.",
         name: "White Sands National Park",
         shortName: "White Sands",
-        states: "New",
+        states: "New Mexico",
         statesList: ["new-mexico"]
     },
     {
@@ -518,7 +518,7 @@ const parkImages = [
         caption: "A bison on the trail. Photo: NPS, Bill Schreier.",
         name: "Wind Cave National Park",
         shortName: "Wind Cave",
-        states: "South",
+        states: "South Dakota",
         statesList: ["south-dakota"]
     },
     {
@@ -545,7 +545,7 @@ const parkImages = [
         caption: "A wolf in Gardiner Basin. Photo: NPS, Neal Herbert.",
         name: "Yellowstone National Park",
         shortName: "Yellowstone",
-        states: "Idaho",
+        states: "Idaho, Montana, Wyoming",
         statesList: ["idaho", "montana", "wyoming"]
     },
     {
