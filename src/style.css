@@ -1,0 +1,373 @@
+#container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; /* main axis */
+    align-items: flex-start; /* cross axis */
+}
+
+header {
+    width: 90%;
+    margin: 0;
+    padding: 0 5%;
+    flex: initial;
+}
+
+form {
+    width: 90%;
+    margin: 1em 0;
+    padding: 0 5%;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;  /* main axis */
+    align-items: flex-start; /* cross axis */
+}
+
+fieldset {
+    width: 100%;
+    margin: 0.5em 0;
+    padding: 0.5em 0;
+    flex: initial;
+    border: none;
+}
+
+select {
+    width: 30%;
+}
+
+input {
+    margin-right: 1em;
+}
+
+input[type="text"] {
+    width: 60%;
+}
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;  /* main axis */
+    align-items: flex-start; /* cross axis */
+}
+
+aside {
+    width: 90%;
+    margin: 0;
+    padding: 0 5%;
+}
+
+section {
+    width: 90%;
+    margin: 1em 0;
+    padding: 1em 5%;
+    background: #fafafa;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;  /* main axis */
+    align-items: flex-start; /* cross axis */
+    position: relative;
+}
+
+#close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.title {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: initial;
+}
+
+.content {
+    width: 48%;
+    margin: 0;
+    padding: 0;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;  /* main axis */
+    align-items: flex-start; /* cross axis */
+}
+
+.expandable {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;  /* main axis */
+    align-items: center; /* cross axis */
+
+}
+
+.full {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: initial;
+}
+
+/* Transition - smooths show/hide */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.gallery {
+    width: 90%;
+    margin: 1em 0;
+    padding: 1em 5%;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;  /* main axis */
+    align-items: flex-start; /* cross axis */
+    gap: 10px;
+}
+
+figure {
+    width: 22%;
+    margin: 0;
+    padding: 0;
+    flex: initial;
+    position: relative;
+}
+
+/* Image becomes no larger than actual size. */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Font styles and their media queries */
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #1a1c1e;
+}
+
+h2 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #001d35;
+}
+
+h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #001d35;
+}
+
+p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #001d35;
+}
+
+dl {
+    margin-top: 0;
+    padding: 0.5em;
+    border: 1px solid #bdbdbd;
+}
+
+dt {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #001d35;
+}
+
+dd {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 2;
+    font-weight: 400;
+    color: #1a1c1e;
+    margin: 0;
+    padding: 0;
+}
+
+dd a {
+    color: #006492;
+    text-decoration: none;
+}
+
+dd a:hover {
+    text-decoration: underline;
+}
+
+figcaption {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #fff;
+    padding: 0.25em;
+    background: rgb(0 0 0 / 60%);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+legend {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #001d35;
+}
+
+label, select, input[type="text"] {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #1a1c1e;
+}
+
+input::placeholder {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #bdbdbd;
+}
+
+/* Media queries for fonts */
+@media (width >= 300px) and (width <= 399px) {
+    p {
+        font-size: 0.875em; /* 14px */
+    }
+
+    dt, dd, figcaption {
+        font-size: 0.8125em; /* 13px */
+    }
+
+    h1 {
+        font-size: 1.125em; /* 18 px */
+    }
+
+    h2 {
+        font-size: 1em; /* 16px */
+    }
+
+    h3 {
+        font-size: 0.875em; /* 14px */
+    }
+
+    legend {
+        font-size: 0.875em; /* 14px */
+    }
+
+    label, select, input::placeholder, input[type="text"], button {
+        font-size: 0.875em; /* 14px */
+    }
+}
+
+@media (width >= 400px) and (width <= 499px) {
+    p {
+        font-size: 0.9375em; /* 15px */
+    }
+
+    dt, dd, figcaption {
+        font-size: 0.875em; /* 14px */
+    }
+
+    h1 {
+        font-size: 1.1875em; /* 19px */
+    }
+
+    h2 {
+        font-size: 1.0625em; /* 17px */
+    }
+
+    h3 {
+        font-size: 0.9375em; /* 15px */
+    }
+
+    legend {
+        font-size: 0.9375em; /* 15px */
+    }
+
+    label, select, input::placeholder, input[type="text"], button {
+        font-size: 0.9375em; /* 15px */
+    }
+}
+
+@media (width >= 500px) and (width <= 599px) {
+    p {
+        font-size: 1em; /* 16px */
+    }
+
+    dt, dd, figcaption {
+        font-size: 0.9375em; /* 15px */
+    }
+
+    h1 {
+        font-size: 1.25em; /* 20px */
+    }
+
+    h2 {
+        font-size: 1.125em; /* 18 px */
+    }
+
+    h3 {
+        font-size: 1em; /* 16px */
+    }
+
+    legend {
+        font-size: 1em; /* 16px */
+    }
+
+    label, select, input::placeholder, input[type="text"], button {
+        font-size: 1em; /* 16px */
+    }
+}
+
+@media (width >= 600px) {
+    p {
+        font-size: 1.0625em; /* 17px */
+    }
+
+    dt, dd, figcaption {
+        font-size: 1em; /* 16px */
+    }
+
+    h1 {
+        font-size: 1.3125em; /* 21px */
+    }
+
+    h2 {
+        font-size: 1.1875em; /* 19px */
+    }
+
+    h3 {
+        font-size: 1.0625em; /* 17px */
+    }
+
+    legend {
+        font-size: 1.0625em; /* 17px */
+    }
+
+    label, select, input::placeholder, input[type="text"], button {
+        font-size: 1.0625em; /* 17px */
+    }
+}
