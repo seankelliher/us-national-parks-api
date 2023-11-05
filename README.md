@@ -9,7 +9,8 @@ IN DEVELOPMENT: building framework.
 
 ## Project Screen Shots
 
-Screen shots to come.
+* DRAFT - rough view of Alaska parks with Denali selected.
+![screen shot of project](/screenshots/us-national-parks-api-screenshot1.png?s=600)
 
 ## Installation and Setup Instructions
 
@@ -42,3 +43,4 @@ Reflection to come.
 * Design guidance from Google's [Material Design](https://material.io/design) and [Adobe Color](https://color.adobe.com/trends).
 * Linting guidance from [ESLint](https://eslint.org) and [Stylelint](https://stylelint.io).
 * Shields from [Shields](https://shields.io).
+* Helpful advice on capitalizing letters in JavaScript [Flexiple](https://flexiple.com/javascript/javascript-capitalize-first-letter).
