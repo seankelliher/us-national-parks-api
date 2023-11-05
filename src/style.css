@@ -62,6 +62,7 @@ aside {
     width: 90%;
     margin: 0;
     padding: 0 5%;
+    flex: initial;
 }
 
 section {
@@ -140,15 +141,44 @@ section {
     flex-flow: row wrap;
     justify-content: flex-start;  /* main axis */
     align-items: flex-start; /* cross axis */
-    gap: 10px;
+    gap: 15px;
 }
 
-figure {
+figure.thumb {
     width: 22%;
     margin: 0;
     padding: 0;
     flex: initial;
     position: relative;
+}
+
+figure.thumb:hover {
+    cursor: pointer;
+}
+
+figure.icon {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    flex: initial;
+    position: relative;
+}
+
+figure.icon:hover {
+    cursor: pointer;
+}
+
+figcaption {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #fff;
+    padding: 0.25em;
+    background: rgb(0 0 0 / 60%);
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 /* Image becomes no larger than actual size. */
@@ -216,18 +246,6 @@ dd a {
 
 dd a:hover {
     text-decoration: underline;
-}
-
-figcaption {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.4;
-    font-weight: 400;
-    color: #fff;
-    padding: 0.25em;
-    background: rgb(0 0 0 / 60%);
-    position: absolute;
-    top: 10px;
-    left: 10px;
 }
 
 legend {

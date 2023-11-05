@@ -30,6 +30,20 @@ watch(selectedPark, (newValue) => {
     }
 });
 
+function formatStateName() {
+    const raw = selectedState.value;
+    const dash = (raw.includes("-")) ? raw.replace("-", " ") : raw;
+
+    // Splits the string into an array at the space between words.
+    const arr = dash.split(" ");
+
+    let index;
+    for (index = 0; index < arr.length; index++) {
+        arr[index] = arr[index].charAt(0).toUpperCase() + arr[index].slice(1);
+    }
+    return arr.join(" ");
+}
+
 function scrollSample() {
     const container = document.getElementById("container");
     const containerH = container.offsetHeight;
@@ -87,11 +101,15 @@ function scrollSample() {
     </form>
 
     <main>
+        <aside>
+            <h2>National Parks in {{ formatStateName() }}</h2>
+        </aside>
         <div class="gallery">
             <template v-for="parkImage in parkImages" :key="parkImage.parkId">
                 <template v-if="selectedState === 'All states'">
                     <figure
                         @click="selectedPark = parkImage.parkId"
+                        class="thumb"
                     >
                         <img
                             :src="`images/${parkImage.image}.jpg`"
@@ -105,6 +123,7 @@ function scrollSample() {
                     <figure
                         v-if="parkImage.statesList.includes(`${selectedState}`)"
                         @click="selectedPark = parkImage.parkId"
+                        class="thumb"
                     >
                         <img
                             :src="`images/${parkImage.image}.jpg`"
@@ -117,7 +136,13 @@ function scrollSample() {
             </template>
         </div>
         <section v-for="returnedPark in returnedParks" :key="returnedPark.id" id="sample">
-            <img id="close-icon" src="images/icon-close-24.svg" @click="returnedParks=''">
+            <figure
+                id="close-icon"
+                @click="returnedParks=''"
+                class="icon"
+            >
+                <img src="images/icon-close-24.svg" alt="close icon">
+            </figure>
             <div class="title">
                 <h2>{{ returnedPark.fullName }}</h2>
                 <h3>{{ returnedPark.designation }} {{ returnedPark.states }}</h3>
@@ -129,8 +154,22 @@ function scrollSample() {
                 </div>
 
                 <div class="expandable">
-                    <p @click="returnedPark.showMore = ! returnedPark.showMore">Address, phone, email, climate</p> <img v-show="!returnedPark.showMore" src="images/icon-expand-more-24.svg" alt="expand more icon"><img v-show="returnedPark.showMore" src="images/icon-expand-less-24.svg" alt="expand less icon">
+                    <p @click="returnedPark.showMore = ! returnedPark.showMore">Address, phone, email, climate</p>
+                    <figure
+                        v-show="!returnedPark.showMore"
+                        class="icon"
+                    >
+                        <img  src="images/icon-expand-more-24.svg" alt="expand more icon">
+                    </figure>
+
+                    <figure
+                        v-show="returnedPark.showMore"
+                        class="icon"
+                    >
+                        <img  src="images/icon-expand-less-24.svg" alt="expand less icon">
+                    </figure>
                 </div>
+
                 <Transition name="fade">
                     <div v-show="returnedPark.showMore" class="full">
                         <dl v-for="address in returnedPark.addresses" :key="address.type">
