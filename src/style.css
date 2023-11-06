@@ -11,8 +11,42 @@
 
 header {
     width: 90%;
+    margin: 0 5%;
+    padding: 0;
+    border-bottom: 2px solid #201a17;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;  /* main axis */
+    align-items: center; /* cross axis */
+}
+
+.hline-logo {
+    width: 40%;
     margin: 0;
-    padding: 0 5%;
+    padding: 0;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;  /* main axis */
+    align-items: center; /* cross axis */
+}
+
+figure.logo {
+    width: 60px;
+    margin: 0.5em 0;
+    padding-right: 1em;
+    flex: initial;
+}
+
+figure.logo:hover {
+    cursor: pointer;
+}
+
+.sline {
+    width: 40%;
+    margin: 0;
+    padding: 0;
     flex: initial;
 }
 
@@ -36,7 +70,7 @@ fieldset {
 }
 
 select {
-    width: 30%;
+    width: 20%;
 }
 
 input {
@@ -66,10 +100,10 @@ aside {
 }
 
 section {
-    width: 90%;
-    margin: 1em 0;
+    width: 80%;
+    margin: 1em 5%;
     padding: 1em 5%;
-    background: #fafafa;
+    background: #fff8f5;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
@@ -111,7 +145,6 @@ section {
     flex-flow: row wrap;
     justify-content: flex-start;  /* main axis */
     align-items: center; /* cross axis */
-
 }
 
 .full {
@@ -175,7 +208,7 @@ figcaption {
     font-weight: 400;
     color: #fff;
     padding: 0.25em;
-    background: rgb(0 0 0 / 60%);
+    background: rgb(50 18 0 / 70%);
     position: absolute;
     top: 10px;
     left: 10px;
@@ -193,58 +226,63 @@ h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 500;
-    color: #1a1c1e;
+    color: #201a17;
 }
 
 h2 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 500;
-    color: #001d35;
+    color: #201a17;
 }
 
 h3 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 500;
-    color: #001d35;
+    color: #201a17;
 }
 
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.8;
     font-weight: 400;
-    color: #001d35;
+    color: #201a17;
+}
+
+.highlight {
+    color: #c05900;
 }
 
 dl {
     margin-top: 0;
-    padding: 0.5em;
-    border: 1px solid #bdbdbd;
+    padding: 1em;
+    border: 1px solid #ece0db;
 }
 
 dt {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 500;
-    color: #001d35;
+    color: #201a17;
 }
 
 dd {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 2;
     font-weight: 400;
-    color: #1a1c1e;
+    color: #201a17;
     margin: 0;
     padding: 0;
 }
 
 dd a {
-    color: #006492;
+    color: #c05900;
     text-decoration: none;
 }
 
 dd a:hover {
+    color: #c05900;
     text-decoration: underline;
 }
 
@@ -252,14 +290,14 @@ legend {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    color: #001d35;
+    color: #201a17;
 }
 
 label, select, input[type="text"] {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    color: #1a1c1e;
+    color: #201a17;
 }
 
 input::placeholder {
