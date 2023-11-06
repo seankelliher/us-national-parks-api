@@ -1,4 +1,6 @@
 <script setup>
+import HeaderPart from "./HeaderPart.vue";
+import FormPart from "./FormPart.vue";
 import { parkImages } from "../data/gallery.js";
 import { ref, watch } from "vue";
 
@@ -58,51 +60,17 @@ function scrollSample() {
 </script>
 
 <template>
-    <form id="states-list">
-        <fieldset>
-            <legend tabindex="0">Select a state</legend>
-            <select v-model="selectedState">
-                <option>All states</option>
-                <option value="alaska">Alaska</option>
-                <option value="american-samoa">American Samoa</option>
-                <option value="arizona">Arizona</option>
-                <option value="arkansas">Arkansas</option>
-                <option value="california">California</option>
-                <option value="colorado">Colorado</option>
-                <option value="florida">Florida</option>
-                <option value="hawaii">Hawaii</option>
-                <option value="idaho">Idaho</option>
-                <option value="indiana">Indiana</option>
-                <option value="kentucky">Kentucky</option>
-                <option value="maine">Maine</option>
-                <option value="michigan">Michigan</option>
-                <option value="minnesota">Minnesota</option>
-                <option value="missouri">Missouri</option>
-                <option value="montana">Montana</option>
-                <option value="nevada">Nevada</option>
-                <option value="new-mexico">New Mexico</option>
-                <option value="new-york">New York</option>
-                <option value="north-carolina">North Carolina</option>
-                <option value="north-dakota">North Dakota</option>
-                <option value="ohio">Ohio</option>
-                <option value="oregon">Oregon</option>
-                <option value="south-carolina">South Carolina</option>
-                <option value="south-dakota">South Dakota</option>
-                <option value="tennessee">Tennessee</option>
-                <option value="texas">Texas</option>
-                <option value="utah">Utah</option>
-                <option value="virgin-islands">Virgin Islands</option>
-                <option value="virginia">Virginia</option>
-                <option value="washington">Washington</option>
-                <option value="west-virginia">West Virginia</option>
-                <option value="wyoming">Wyoming</option>
-            </select>
-        </fieldset>
-    </form>
+    <HeaderPart
+        headline="Find a National Park"
+        subHeadline="Parks are located in 32 states and American Samoa."
+        @restoreDefault="selectedState='All states'"
+    />
+
+    <FormPart v-model:selected="selectedState" />
 
     <main>
         <aside>
-            <h2>National Parks in {{ formatStateName() }}</h2>
+            <p>Currently viewing parks in <strong>{{ formatStateName() }}</strong></p>
         </aside>
         <div class="gallery">
             <template v-for="parkImage in parkImages" :key="parkImage.parkId">
@@ -154,7 +122,9 @@ function scrollSample() {
                 </div>
 
                 <div class="expandable">
-                    <p @click="returnedPark.showMore = ! returnedPark.showMore">Address, phone, email, climate</p>
+                    <p
+                        @click="returnedPark.showMore = ! returnedPark.showMore"
+                        class="highlight">Address, phone, email, climate</p>
                     <figure
                         v-show="!returnedPark.showMore"
                         class="icon"
