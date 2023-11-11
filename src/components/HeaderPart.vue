@@ -1,10 +1,10 @@
 <script setup>
 defineProps({
-    headline: {
+    title: {
         type: String,
         required: true
     },
-    subHeadline: {
+    subTitle: {
         type: String,
         required: true
     }
@@ -16,20 +16,17 @@ defineEmits(["restoreDefault"]);
 
 <template>
     <header>
-        <div class="hline-logo">
-            <figure
-                @click="$emit('restoreDefault')"
-                class="logo"
-            >
-                <img src="images/national-park-service-logo.svg" alt="National Park Service logo">
-            </figure>
-            <h1>{{ headline }}</h1>
-        </div>
-        <div class="sline">
-            <p>{{ subHeadline }}</p>
+        <figure
+            @click="$emit('restoreDefault')"
+            class="logo"
+        >
+            <img src="images/national-park-service-logo.svg" alt="National Park Service logo">
+        </figure>
+        <div class="headlines">
+            <h1>{{ title }}</h1>
+            <p class="sub-title">{{ subTitle }}</p>
         </div>
     </header>
-    
 </template>
 
 <style scoped>
