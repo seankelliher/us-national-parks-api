@@ -61,8 +61,8 @@ function scrollSample() {
 
 <template>
     <HeaderPart
-        headline="Find a National Park"
-        subHeadline="Parks are located in 32 states and American Samoa."
+        title="Find a National Park"
+        subTitle="Located in 32 states &amp; American Samoa."
         @restoreDefault="selectedState='All states'"
     />
 
@@ -70,7 +70,7 @@ function scrollSample() {
 
     <main>
         <aside>
-            <p>Currently viewing parks in <strong>{{ formatStateName() }}</strong></p>
+            <p>National Parks in {{ formatStateName() }}</p>
         </aside>
         <div class="gallery">
             <template v-for="parkImage in parkImages" :key="parkImage.parkId">
