@@ -159,6 +159,10 @@ function scrollSample() {
                     </div>
                 </Transition>
             </div> <!-- close content -->
+
+            <div class="map">
+                <img :src="`https://api.mapbox.com/styles/v1/mapbox/light-v11/static/pin-s-l+000(${returnedPark.longitude},${returnedPark.latitude})/${returnedPark.longitude},${returnedPark.latitude},4/500x300?access_token=ADD-ACCESS-TOKEN-HERE`" alt="Static map image of Edmund Pettus Bridge in Selma, Alabama, using the Dark map style, with a black marker with the letter 'L' positioned in the middle of the bridge.">
+            </div> <!-- close map -->
         </section>
     </main>
 </template>

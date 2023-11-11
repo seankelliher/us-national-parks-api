@@ -166,6 +166,13 @@ section {
     opacity: 0;
 }
 
+.map {
+    width: 48%;
+    margin: 0;
+    padding: 0;
+    flex: initial;
+}
+
 .gallery {
     width: 90%;
     margin: 0;
