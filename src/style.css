@@ -2,6 +2,13 @@ html {
     background: #fafcff;
 }
 
+/* Image becomes no larger than actual size. */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 #container {
     width: 100%;
     max-width: 1280px;
@@ -28,9 +35,6 @@ header {
     width: 45%;
     margin: 0;
     padding: 1em 5%;
-    /*background: #fff8f5;
-    border-bottom: 1px solid #ffb68c;
-    border-radius: 8px;*/
     flex: initial;
     display: flex;
     flex-flow: row wrap;
@@ -61,9 +65,6 @@ form {
     width: 20%;
     margin: 0;
     padding: 1em 5%;
-    /*background: #f4faff;
-    border: 1px solid #8bceff;
-    border-radius: 8px;*/
     flex: initial;
     display: flex;
     flex-flow: row wrap;
@@ -104,10 +105,47 @@ main {
 
 aside {
     width: 90%;
-    margin: 1em 5% 0 5%;
+    margin: 1em 5% 0; /* longhand is 1em 5% 0 5% */
     padding: 0;
     border-top: 2px solid #ffb68c;
     flex: initial;
+}
+
+.gallery {
+    width: 90%;
+    margin: 0;
+    padding: 1em 5%;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;  /* main axis */
+    align-items: flex-start; /* cross axis */
+}
+
+.gallery::after {
+    content: "";
+    width: 31%;
+}
+
+figure.thumb {
+    width: 31%;
+    margin: 0.5em 0;
+    padding: 0;
+    flex: initial;
+    transition: all 1.2s; /* [property] [duration] */
+}
+
+figure.thumb:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+figcaption {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #001f2a;
+    padding: 0.25em;
 }
 
 section {
@@ -122,6 +160,19 @@ section {
     justify-content: space-between;  /* main axis */
     align-items: flex-start; /* cross axis */
     position: relative;
+}
+
+figure.icon {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    flex: initial;
+    position: relative;
+}
+
+figure.icon:hover {
+    cursor: pointer;
 }
 
 #close-icon {
@@ -159,13 +210,6 @@ section {
     align-items: center; /* cross axis */
 }
 
-.full {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    flex: initial;
-}
-
 /* Transition - smooths show/hide */
 .fade-enter-active,
 .fade-leave-active {
@@ -177,73 +221,18 @@ section {
     opacity: 0;
 }
 
+.full {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: initial;
+}
+
 .map {
     width: 48%;
     margin: 0;
     padding: 0;
     flex: initial;
-}
-
-.gallery {
-    width: 90%;
-    margin: 0;
-    padding: 1em 5%;
-    flex: initial;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;  /* main axis */
-    align-items: flex-start; /* cross axis */
-}
-
-.gallery::after {
-    content: "";
-    width: 31%;
-}
-
-figure.thumb {
-    width: 31%;
-    margin: 0.5em 0;
-    padding: 0;
-    flex: initial;
-    transition: all 1.2s; /* [property] [duration] */
-}
-
-figure.thumb:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-
-}
-
-figure.icon {
-    width: 24px;
-    height: 24px;
-    margin: 0;
-    padding: 0;
-    flex: initial;
-    position: relative;
-}
-
-figure.icon:hover {
-    cursor: pointer;
-}
-
-figcaption {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.4;
-    font-weight: 400;
-    color: #001f2a;
-    padding: 0.25em;
-    /*background: rgb(50 18 0 / 70%);
-    position: absolute;
-    top: 10px;
-    left: 10px;*/
-}
-
-/* Image becomes no larger than actual size. */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
 }
 
 /* Font styles and their media queries */
@@ -290,10 +279,7 @@ p {
 dl {
     margin-top: 0;
     padding: 1em;
-    /*border: 1px solid #ffb68c;*/
     border-bottom: 1px solid #ffb68c;
-    /*border-radius: 8px;
-    background: #fff;*/
 }
 
 dl:last-child {
@@ -372,7 +358,7 @@ input::placeholder {
         font-size: 0.875em; /* 14px */
     }
 
-    label, select, input::placeholder, input[type="text"], button {
+    label, select, input::placeholder, input[type="text"] {
         font-size: 0.875em; /* 14px */
     }
 }
@@ -402,7 +388,7 @@ input::placeholder {
         font-size: 0.9375em; /* 15px */
     }
 
-    label, select, input::placeholder, input[type="text"], button {
+    label, select, input::placeholder, input[type="text"] {
         font-size: 0.9375em; /* 15px */
     }
 }
@@ -432,7 +418,7 @@ input::placeholder {
         font-size: 1em; /* 16px */
     }
 
-    label, select, input::placeholder, input[type="text"], button {
+    label, select, input::placeholder, input[type="text"] {
         font-size: 1em; /* 16px */
     }
 }
@@ -462,7 +448,7 @@ input::placeholder {
         font-size: 1.0625em; /* 17px */
     }
 
-    label, select, input::placeholder, input[type="text"], button {
+    label, select, input::placeholder, input[type="text"] {
         font-size: 1.0625em; /* 17px */
     }
 }
