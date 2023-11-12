@@ -164,8 +164,8 @@ function scrollToParkInfo() {
                 </Transition>
             </div> <!-- close content -->
 
-            <div class="map">
-                <img :src="`https://api.mapbox.com/styles/v1/mapbox/outdoors-v11/static/pin-s-p+000(${returnedPark.longitude},${returnedPark.latitude})/${returnedPark.longitude},${returnedPark.latitude},5/702x421?access_token=ADD-ACCESS-TOKEN-HERE`" :alt="`Static map, area around ${returnedPark.fullName}`">
+            <div class="map"> <!-- Mapbox token restricted to URL on Heroku -->
+                <img :src="`https://api.mapbox.com/styles/v1/mapbox/outdoors-v11/static/pin-s-p+000(${returnedPark.longitude},${returnedPark.latitude})/${returnedPark.longitude},${returnedPark.latitude},5/702x421?access_token=pk.eyJ1Ijoic2s1NjQ2NzMiLCJhIjoiY2xvdngzOWNuMHNtNDJrcnptNGZvMWY5byJ9.IUg94wBRIGusuy0hZx77kA`" :alt="`Static map, area around ${returnedPark.fullName}`">
             </div> <!-- close map -->
         </section>
     </main>
