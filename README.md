@@ -9,13 +9,13 @@ IN DEVELOPMENT: Mostly built. Now testing.
 
 ## Project Screen Shots
 
-* All parks displayed (default view).
+* All parks (default view).
 ![screen shot of project](/screenshots/us-national-parks-api-screenshot1.png?s=600)
 
-* National Parks in Alaska.
+* Alaska parks.
 ![screen shot of project](/screenshots/us-national-parks-api-screenshot2.png?s=600)
 
-* Details on Kenai Fjords National Park.
+* Arizona parks, with details on Grand Canyon.
 ![screen shot of project](/screenshots/us-national-parks-api-screenshot3.png?s=600)
 
 ## Installation and Setup Instructions
