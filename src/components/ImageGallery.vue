@@ -138,7 +138,7 @@ function scrollToParkInfo() {
                         v-show="returnedPark.showMore"
                         class="icon"
                     >
-                        <img  src="images/icon-expand-less-24.svg" alt="expand less icon">
+                        <img  src="./images/icon-expand-less-24.svg" alt="expand less icon">
                     </figure>
                 </div>
 
