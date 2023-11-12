@@ -8,9 +8,11 @@ const returnedParks = ref();
 const selectedState = ref("All states");
 const selectedPark = ref();
 
+// Using locally -> http://localhost:4040/something
+// Using remotely -> /something
 watch(selectedPark, (newValue) => {
     if (newValue !== "Choose a state") {
-        fetch(`http://localhost:4040/${selectedPark.value}`)
+        fetch(`/${selectedPark.value}`)
             .then((response) => {
                 if (response.ok) {
                     return response.json();
