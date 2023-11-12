@@ -23,7 +23,7 @@ watch(selectedPark, (newValue) => {
                 //totalParks.value = data.total;
             })
             .then(() => {
-                scrollSample();
+                scrollToParkInfo();
             })
             .catch((error) => {
                 console.log(error);
@@ -46,14 +46,14 @@ function formatStateName() {
     return arr.join(" ");
 }
 
-function scrollSample() {
+function scrollToParkInfo() {
     const container = document.getElementById("container");
     const containerH = container.offsetHeight;
 
     const windowH = window.innerHeight;
 
     if (containerH > windowH) {
-        const element = document.getElementById("sample");
+        const element = document.getElementById("park-info");
         element.scrollIntoView({ behavior: "smooth" });     
     }
 }
@@ -105,7 +105,7 @@ function scrollSample() {
                 </template>
             </template>
         </div> <!-- close gallery -->
-        <section v-for="returnedPark in returnedParks" :key="returnedPark.id" id="sample">
+        <section v-for="returnedPark in returnedParks" :key="returnedPark.id" id="park-info">
             <figure
                 id="close-icon"
                 @click="returnedParks=''"
