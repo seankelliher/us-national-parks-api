@@ -163,7 +163,7 @@ function scrollToParkInfo() {
             </div> <!-- close content -->
 
             <div class="map">
-                <img :src="`https://api.mapbox.com/styles/v1/mapbox/outdoors-v11/static/pin-s-p+000(${returnedPark.longitude},${returnedPark.latitude})/${returnedPark.longitude},${returnedPark.latitude},4/500x300?access_token=ADD-ACCESS-TOKEN-HERE`" :alt="`Static map, area around ${returnedPark.fullName}`">
+                <img :src="`https://api.mapbox.com/styles/v1/mapbox/outdoors-v11/static/pin-s-p+000(${returnedPark.longitude},${returnedPark.latitude})/${returnedPark.longitude},${returnedPark.latitude},5/702x421?access_token=ADD-ACCESS-TOKEN-HERE`" :alt="`Static map, area around ${returnedPark.fullName}`">
             </div> <!-- close map -->
         </section>
     </main>
