@@ -111,7 +111,7 @@ function scrollToParkInfo() {
                 @click="returnedParks=''"
                 class="icon"
             >
-                <img src="images/icon-close-24.svg" alt="close icon">
+                <img src="./images/icon-close-24.svg" alt="close icon">
             </figure>
             <div class="title">
                 <h2>{{ returnedPark.fullName }}</h2>
