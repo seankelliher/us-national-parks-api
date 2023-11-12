@@ -1,16 +1,22 @@
 [![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/us-national-parks-api?style=flat-square)](/LICENSE.txt)
 ## National Parks in the US
 
-IN DEVELOPMENT: Directory of National Parks in the US, built with Vue.js and Express.js.
+IN DEVELOPMENT: Directory of National Parks in the US, built with Vue.js, Express.js, and Mapbox. [View working component](https://us-national-parks-api-8cfadda86ff0.herokuapp.com). **"Eco" dyno, takes a few seconds to wake up.** 
 
 ## Project Status
 
-IN DEVELOPMENT: building framework.
+IN DEVELOPMENT: Mostly built. Now testing.
 
 ## Project Screen Shots
 
-* DRAFT - rough view of Alaska parks with Denali selected.
+* All parks displayed (default view).
 ![screen shot of project](/screenshots/us-national-parks-api-screenshot1.png?s=600)
+
+* National Parks in Alaska.
+![screen shot of project](/screenshots/us-national-parks-api-screenshot2.png?s=600)
+
+* Details on Kenai Fjords National Park.
+![screen shot of project](/screenshots/us-national-parks-api-screenshot3.png?s=600)
 
 ## Installation and Setup Instructions
 
