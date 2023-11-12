@@ -9,16 +9,27 @@ html {
     padding: 0;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between; /* main axis */
+    justify-content: flex-start; /* main axis */
     align-items: flex-start; /* cross axis */
+}
+
+.masthead {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;  /* main axis */
+    align-items: center; /* cross axis */
 }
 
 header {
     width: 45%;
-    margin: 0.5em 0;
-    padding: 0.5em 5%;
+    margin: 0;
+    padding: 1em 5%;
     /*background: #fff8f5;
-    border: 1px solid #ffb68c;
+    border-bottom: 1px solid #ffb68c;
     border-radius: 8px;*/
     flex: initial;
     display: flex;
@@ -48,16 +59,16 @@ figure.logo:hover {
 
 form {
     width: 20%;
-    margin: 0.5em 5%;
-    padding: 0.5em 5%;
-    background: #f4faff;
+    margin: 0;
+    padding: 1em 5%;
+    /*background: #f4faff;
     border: 1px solid #8bceff;
-    border-radius: 8px;
+    border-radius: 8px;*/
     flex: initial;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;  /* main axis */
-    align-items: flex-start; /* cross axis */
+    align-items: center; /* cross axis */
 }
 
 fieldset {
@@ -93,8 +104,9 @@ main {
 
 aside {
     width: 90%;
-    margin: 0;
-    padding: 0 5%;
+    margin: 1em 5% 0 5%;
+    padding: 0;
+    border-top: 2px solid #ffb68c;
     flex: initial;
 }
 
@@ -102,8 +114,7 @@ section {
     width: 80%;
     margin: 1em 5%;
     padding: 1em 5%;
-    background: #f4faff;
-    border: 1px solid #8bceff;
+    border: 2px solid #ffb68c;
     border-radius: 8px;
     flex: initial;
     display: flex;
@@ -194,11 +205,13 @@ figure.thumb {
     margin: 0.5em 0;
     padding: 0;
     flex: initial;
-    /*position: relative;*/
+    transition: all 1.2s; /* [property] [duration] */
 }
 
 figure.thumb:hover {
     cursor: pointer;
+    transform: scale(1.05);
+
 }
 
 figure.icon {
@@ -272,15 +285,19 @@ p {
 
 .highlight {
     color: #c05900;
-    color: #006492;
 }
 
 dl {
     margin-top: 0;
     padding: 1em;
-    border: 1px solid #ece0db;
-    border: 1px solid #c9e6ff;
-    border-radius: 8px;
+    /*border: 1px solid #ffb68c;*/
+    border-bottom: 1px solid #ffb68c;
+    /*border-radius: 8px;
+    background: #fff;*/
+}
+
+dl:last-child {
+    border-bottom: none;
 }
 
 dt {
@@ -301,13 +318,10 @@ dd {
 
 dd a {
     color: #c05900;
-    color: #006492;
     text-decoration: none;
 }
 
 dd a:hover {
-    color: #c05900;
-    color: #006492;
     text-decoration: underline;
 }
 
