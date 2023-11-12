@@ -60,13 +60,15 @@ function scrollSample() {
 </script>
 
 <template>
-    <HeaderPart
-        title="Find a National Park"
-        subTitle="Located in 32 states &amp; American Samoa."
-        @restoreDefault="selectedState='All states'"
-    />
+    <div class="masthead">
+        <HeaderPart
+            title="Find a National Park"
+            subTitle="Located in 32 states &amp; American Samoa."
+            @restoreDefault="selectedState='All states'"
+        />
 
-    <FormPart v-model:selected="selectedState" />
+        <FormPart v-model:selected="selectedState" />
+    </div>
 
     <main>
         <aside>
@@ -102,7 +104,7 @@ function scrollSample() {
                     </figure>
                 </template>
             </template>
-        </div>
+        </div> <!-- close gallery -->
         <section v-for="returnedPark in returnedParks" :key="returnedPark.id" id="sample">
             <figure
                 id="close-icon"
@@ -161,7 +163,7 @@ function scrollSample() {
             </div> <!-- close content -->
 
             <div class="map">
-                <img :src="`https://api.mapbox.com/styles/v1/mapbox/light-v11/static/pin-s-l+000(${returnedPark.longitude},${returnedPark.latitude})/${returnedPark.longitude},${returnedPark.latitude},4/500x300?access_token=ADD-ACCESS-TOKEN-HERE`" alt="Static map image of Edmund Pettus Bridge in Selma, Alabama, using the Dark map style, with a black marker with the letter 'L' positioned in the middle of the bridge.">
+                <img :src="`https://api.mapbox.com/styles/v1/mapbox/outdoors-v11/static/pin-s-p+000(${returnedPark.longitude},${returnedPark.latitude})/${returnedPark.longitude},${returnedPark.latitude},4/500x300?access_token=ADD-ACCESS-TOKEN-HERE`" :alt="`Static map, area around ${returnedPark.fullName}`">
             </div> <!-- close map -->
         </section>
     </main>
