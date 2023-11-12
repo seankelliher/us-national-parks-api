@@ -1,20 +1,25 @@
 // ========================
 // Packages
 // ========================
-//const express = require("express");
 import express from "express";
+import { fileURLToPath } from "url"; // Because ES modules.
+import { dirname } from "path"; // Because ES modules.
+import process from "process"; // Because ES modules.
+
+// const express = require("express");
 const app = express();
+const __filename = fileURLToPath(import.meta.url); // Because ES modules.
+const __dirname = dirname(__filename); // Because ES modules.
 
 // ========================
 // Middlewares
 // ========================
-//app.use(express.static(__dirname + "/dist/")); // For Heroku deployment.
+app.use(express.static(__dirname + "/dist/")); // For Heroku deployment.
 
 // ========================
 // Routes
 // ========================
-//const token = process.env.APP_TOKEN; // In Heroku, "Open Data" token kept here.
-const token = "ADD-TOKEN-HERE";
+const token = process.env.APP_TOKEN; // In Heroku, "NPS" token kept here.
 
 app.get("/acad", (req, res) => {
     fetch(`https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=${token}`)
@@ -46,7 +51,6 @@ app.get("/arch", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -66,7 +70,6 @@ app.get("/badl", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -86,7 +89,6 @@ app.get("/bibe", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -106,7 +108,6 @@ app.get("/bisc", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -126,7 +127,6 @@ app.get("/blca", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -146,7 +146,6 @@ app.get("/brca", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -166,7 +165,6 @@ app.get("/cany", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -186,7 +184,6 @@ app.get("/care", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -206,7 +203,6 @@ app.get("/cave", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -226,7 +222,6 @@ app.get("/chis", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -246,7 +241,6 @@ app.get("/cong", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -266,7 +260,6 @@ app.get("/crla", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -286,7 +279,6 @@ app.get("/cuva", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -306,7 +298,6 @@ app.get("/deva", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -326,7 +317,6 @@ app.get("/dena", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -346,7 +336,6 @@ app.get("/drto", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -366,7 +355,6 @@ app.get("/ever", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -386,7 +374,6 @@ app.get("/gaar", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -406,7 +393,6 @@ app.get("/jeff", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -426,7 +412,6 @@ app.get("/glba", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -446,7 +431,6 @@ app.get("/glac", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -466,7 +450,6 @@ app.get("/grca", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -486,7 +469,6 @@ app.get("/grte", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -506,7 +488,6 @@ app.get("/grba", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -526,7 +507,6 @@ app.get("/grsa", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -546,7 +526,6 @@ app.get("/grsm", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -566,7 +545,6 @@ app.get("/gumo", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -586,7 +564,6 @@ app.get("/hale", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -606,7 +583,6 @@ app.get("/havo", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -626,7 +602,6 @@ app.get("/hosp", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -646,7 +621,6 @@ app.get("/indu", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -666,7 +640,6 @@ app.get("/isro", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -686,7 +659,6 @@ app.get("/jotr", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -706,7 +678,6 @@ app.get("/katm", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -726,7 +697,6 @@ app.get("/kefj", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -746,7 +716,6 @@ app.get("/kova", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -766,7 +735,6 @@ app.get("/lacl", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -786,7 +754,6 @@ app.get("/lavo", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -806,7 +773,6 @@ app.get("/maca", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -826,7 +792,6 @@ app.get("/meve", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -846,7 +811,6 @@ app.get("/mora", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -866,7 +830,6 @@ app.get("/npsa", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -886,7 +849,6 @@ app.get("/npnh", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -906,7 +868,6 @@ app.get("/neri", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -926,7 +887,6 @@ app.get("/noca", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -946,7 +906,6 @@ app.get("/olym", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -966,7 +925,6 @@ app.get("/pefo", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -986,7 +944,6 @@ app.get("/pinn", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -1006,7 +963,6 @@ app.get("/romo", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -1026,7 +982,6 @@ app.get("/sagu", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -1046,7 +1001,6 @@ app.get("/seki", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -1066,7 +1020,6 @@ app.get("/shen", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -1086,7 +1039,6 @@ app.get("/thro", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -1106,7 +1058,6 @@ app.get("/viis", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -1126,7 +1077,6 @@ app.get("/voya", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -1146,7 +1096,6 @@ app.get("/whsa", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -1166,7 +1115,6 @@ app.get("/wica", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -1186,7 +1134,6 @@ app.get("/wotr", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -1206,7 +1153,6 @@ app.get("/wrst", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -1226,7 +1172,6 @@ app.get("/yell", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -1246,7 +1191,6 @@ app.get("/yose", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -1266,7 +1210,6 @@ app.get("/zion", (req, res) => {
             }
         })
         .then((data) => {
-            //res.send({ trends: data });
             res.send(data);
         })
         .catch((error) => {
@@ -1276,17 +1219,17 @@ app.get("/zion", (req, res) => {
         });
 });
 
-//app.get(/.*/, function(req, res) {
-//res.sendFile(__dirname + "/dist/index.html");
-//});
+app.get(/.*/, function(req, res) {
+    res.sendFile(__dirname + "/dist/index.html");
+});
 
 // ========================
 // Listen
 // ========================
-/*app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT, () => {
     console.log(`Server listening on port ${process.env.PORT}`);
-});*/
-
-app.listen(4040, () => {
-    console.log("Server listening on port 4040");
 });
+
+/* app.listen(4040, () => {
+    console.log("Server listening on port 4040");
+}); */
