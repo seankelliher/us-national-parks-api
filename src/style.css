@@ -183,6 +183,7 @@ figure.thumb {
     /* width: 31%; */
     margin: 0.5em 0;
     padding: 0;
+    background: #c9e6ff;
     flex: initial;
     transition: all 1.2s; /* [property] [duration] */
 }
@@ -215,7 +216,7 @@ figcaption {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.4;
     font-weight: 400;
-    color: #001f2a;
+    color: #001e2f;
     padding: 0.25em;
 }
 
