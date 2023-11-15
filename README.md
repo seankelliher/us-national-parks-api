@@ -1,11 +1,11 @@
 [![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/us-national-parks-api?style=flat-square)](/LICENSE.txt)
 ## National Parks in the US
 
-IN DEVELOPMENT: Directory of National Parks in the US, built with Vue.js, Express.js, and Mapbox. [View working component](https://us-national-parks-api-8cfadda86ff0.herokuapp.com). **"Eco" dyno, takes a few seconds to wake up.** 
+Directory of US National Parks, built with Vue.js, Express.js, and Mapbox. [View working component](https://us-national-parks-api-8cfadda86ff0.herokuapp.com). **"Eco" dyno, takes a few seconds to wake up.** 
 
 ## Project Status
 
-IN DEVELOPMENT: Mostly built. Now testing.
+Mostly built. Now testing.
 
 ## Project Screen Shots
 
@@ -40,7 +40,9 @@ Visit the localhost port displayed in the terminal after running `npm run dev`. 
 
 ## Reflection
 
-Reflection to come.
+My goal was to build a searchable directory of US National Parks. The directory would offer written information, a photo, and an area map of each park.
+
+I pulled written information from the National Park Service (NPS) API. This works nicely and ensures information is up to date. The API also offers images, but this has some problems. Some parks have multiple images; some parks have none; the images are a mix of portrait and landscape; and the image sizes vary and are sometimes huge. Instead, I choose park images on my own and stored them locally. The NPS API also offers longitude and latitude coordinates for each park so I use these coordinates to then pull an area map for each park from Mapbox using its API.
 
 ## Acknowledgments
 
