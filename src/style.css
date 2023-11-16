@@ -28,18 +28,18 @@ img {
     flex: initial;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;  /* main axis */
+    justify-content: space-between; /* main axis */
     align-items: center; /* cross axis */
 }
 
 header {
-    /* width: 45%; */
+    /* width: in media queries, below */
     margin: 0;
     padding: 1em 5%;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;  /* main axis */
+    justify-content: flex-start; /* main axis */
     align-items: center; /* cross axis */
 }
 
@@ -81,13 +81,13 @@ figure.logo:hover {
 }
 
 form {
-    /* width: 20%; */
+    /* width: in media queries, below */
     margin: 0;
     padding: 1em 5%;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;  /* main axis */
+    justify-content: flex-start; /* main axis */
     align-items: center; /* cross axis */
 }
 
@@ -121,7 +121,6 @@ form {
     }
 }
 
-
 fieldset {
     width: 100%;
     margin: 0.5em 0;
@@ -130,18 +129,6 @@ fieldset {
     border: none;
 }
 
-/* select {
-    width: 100%;
-} */
-
-/* input {
-    margin-right: 1em;
-}
-
-input[type="text"] {
-    width: 60%;
-} */
-
 main {
     width: 100%;
     margin: 0;
@@ -149,7 +136,7 @@ main {
     flex: initial;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;  /* main axis */
+    justify-content: flex-start; /* main axis */
     align-items: flex-start; /* cross axis */
 }
 
@@ -168,7 +155,7 @@ aside {
     flex: initial;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;  /* main axis */
+    justify-content: space-between; /* main axis */
     align-items: flex-start; /* cross axis */
 }
 
@@ -180,7 +167,7 @@ aside {
 }
 
 figure.thumb {
-    /* width: 31%; */
+    /* width: in media queries, below */
     margin: 0.5em 0;
     padding: 0;
     background: #c9e6ff;
@@ -229,7 +216,7 @@ section {
     flex: initial;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;  /* main axis */
+    justify-content: space-between; /* main axis */
     align-items: flex-start; /* cross axis */
     position: relative;
 }
@@ -261,13 +248,13 @@ figure.icon:hover {
 }
 
 .content {
-    /* width: 48%; */
+    /* width: in media queries, below */
     margin: 0;
     padding: 0;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;  /* main axis */
+    justify-content: space-between; /* main axis */
     align-items: flex-start; /* cross axis */
 }
 
@@ -290,7 +277,7 @@ figure.icon:hover {
     flex: initial;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;  /* main axis */
+    justify-content: flex-start; /* main axis */
     align-items: center; /* cross axis */
 }
 
@@ -313,7 +300,7 @@ figure.icon:hover {
 }
 
 .map {
-    /* width: 48%; */
+    /* width: in media queries, below */
     margin: 0;
     padding: 0;
     flex: initial;
