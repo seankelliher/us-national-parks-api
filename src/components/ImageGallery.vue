@@ -11,24 +11,30 @@ const selectedPark = ref();
 // Using locally -> http://localhost:4040/something
 // Using remotely -> /something
 watch(selectedPark, () => {
-    fetch(`/${selectedPark.value}`)
-        .then((response) => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                return Promise.reject(`Error: ${response.status}, Data currently unavailable. Please try again later.`);
-            }
-        })
-        .then((data) => {
-            returnedParks.value = data.data;
-        })
-        .then(() => {
-            scrollToParkInfo();
-        })
-        .catch((error) => {
-            console.log(error);
-            alert(error);
-        });
+    if (!sessionStorage.getItem(`${selectedPark.value}`)) {
+        fetch(`http://localhost:4040/${selectedPark.value}`)
+            .then((response) => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    return Promise.reject(`Error: ${response.status}, Data currently unavailable. Please try again later.`);
+                }
+            })
+            .then((data) => {
+                returnedParks.value = data.data;
+                sessionStorage.setItem(`${selectedPark.value}`, JSON.stringify(data.data));
+            })
+            .then(() => {
+                scrollToParkInfo();
+            })
+            .catch((error) => {
+                console.log(error);
+                alert(error);
+            });   
+    } else {
+        returnedParks.value = JSON.parse(sessionStorage.getItem(`${selectedPark.value}`));
+        scrollToParkInfo();
+    }
 });
 
 function formatStateName() {
