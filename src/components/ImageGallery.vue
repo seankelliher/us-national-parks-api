@@ -12,7 +12,7 @@ const selectedPark = ref();
 // Using remotely -> /something
 watch(selectedPark, () => {
     if (!sessionStorage.getItem(`${selectedPark.value}`)) {
-        fetch(`http://localhost:4040/${selectedPark.value}`)
+        fetch(`/${selectedPark.value}`)
             .then((response) => {
                 if (response.ok) {
                     return response.json();
