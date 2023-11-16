@@ -10,28 +10,25 @@ const selectedPark = ref();
 
 // Using locally -> http://localhost:4040/something
 // Using remotely -> /something
-watch(selectedPark, (newValue) => {
-    if (newValue !== "Choose a state") {
-        fetch(`/${selectedPark.value}`)
-            .then((response) => {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    return Promise.reject(`Error: ${response.status}, Data currently unavailable. Please try again later.`);
-                }
-            })
-            .then((data) => {
-                returnedParks.value = data.data;
-                //totalParks.value = data.total;
-            })
-            .then(() => {
-                scrollToParkInfo();
-            })
-            .catch((error) => {
-                console.log(error);
-                alert(error);
-            });
-    }
+watch(selectedPark, () => {
+    fetch(`/${selectedPark.value}`)
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                return Promise.reject(`Error: ${response.status}, Data currently unavailable. Please try again later.`);
+            }
+        })
+        .then((data) => {
+            returnedParks.value = data.data;
+        })
+        .then(() => {
+            scrollToParkInfo();
+        })
+        .catch((error) => {
+            console.log(error);
+            alert(error);
+        });
 });
 
 function formatStateName() {
@@ -81,7 +78,9 @@ function scrollToParkInfo() {
                 <template v-if="selectedState === 'All states'">
                     <figure
                         @click="selectedPark = parkImage.parkId"
+                        @keyup.enter="selectedPark = parkImage.parkId"
                         class="thumb"
+                        tabindex="0"
                     >
                         <img
                             :src="`images/${parkImage.image}.jpg`"
@@ -95,7 +94,9 @@ function scrollToParkInfo() {
                     <figure
                         v-if="parkImage.statesList.includes(`${selectedState}`)"
                         @click="selectedPark = parkImage.parkId"
+                        @keyup.enter="selectedPark = parkImage.parkId"
                         class="thumb"
+                        tabindex="0"
                     >
                         <img
                             :src="`images/${parkImage.image}.jpg`"
@@ -111,7 +112,9 @@ function scrollToParkInfo() {
             <figure
                 id="close-icon"
                 @click="returnedParks=''"
+                @keyup.enter="returnedParks=''"
                 class="icon"
+                tabindex="0"
             >
                 <img src="/images/icon-close-24.svg" alt="close icon">
             </figure>
@@ -128,7 +131,12 @@ function scrollToParkInfo() {
                 <div class="expandable">
                     <p
                         @click="returnedPark.showMore = ! returnedPark.showMore"
-                        class="highlight">Address, phone, email, climate</p>
+                        @keyup.enter="returnedPark.showMore = ! returnedPark.showMore"
+                        class="highlight"
+                        tabindex="0"
+                    >
+                        Address, phone, email, climate  
+                    </p>
                     <figure
                         v-show="!returnedPark.showMore"
                         class="icon"
