@@ -77,7 +77,7 @@ function scrollToParkInfo() {
 
     <main>
         <aside>
-            <p>National Parks in {{ formatStateName() }}</p>
+            <p><strong>National Parks in {{ formatStateName() }}</strong></p>
         </aside>
         <div class="gallery">
             <template v-for="parkImage in parkImages" :key="parkImage.parkId">
@@ -93,7 +93,7 @@ function scrollToParkInfo() {
                             :alt="`${parkImage.name}`"
                             :title="`${parkImage.name}`"
                         >
-                        <figcaption>{{ parkImage.shortName }} - {{ parkImage.states }}</figcaption>
+                        <figcaption><strong>{{ parkImage.name }}</strong><br />{{ parkImage.city }}, {{ parkImage.states }}</figcaption>
                     </figure>
                 </template>
                 <template v-if="selectedState !== 'All states'">
@@ -109,7 +109,7 @@ function scrollToParkInfo() {
                             :alt="`${parkImage.name}`"
                             :title="`${parkImage.name}`"
                         >
-                        <figcaption>{{ parkImage.shortName }} - {{ parkImage.states }}</figcaption>
+                        <figcaption><strong>{{ parkImage.name }}</strong><br />{{ parkImage.city }}, {{ parkImage.states }}</figcaption>
                     </figure>
                 </template>
             </template>

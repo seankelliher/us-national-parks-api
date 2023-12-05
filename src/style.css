@@ -83,7 +83,7 @@ figure.logo:hover {
 form {
     /* width: in media queries, below */
     margin: 0;
-    padding: 1em 5%;
+    padding: 0.5em 5%;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
@@ -144,7 +144,6 @@ aside {
     width: 90%;
     margin: 1em 5% 0; /* longhand is 1em 5% 0 5% */
     padding: 0;
-    border-top: 2px solid #ffb68c;
     flex: initial;
 }
 
@@ -156,7 +155,7 @@ aside {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between; /* main axis */
-    align-items: flex-start; /* cross axis */
+    align-items: stretch; /* cross axis */
 }
 
 @media (min-width: 600px) {
@@ -170,7 +169,8 @@ figure.thumb {
     /* width: in media queries, below */
     margin: 0.5em 0;
     padding: 0;
-    background: #c9e6ff;
+    background: #e6f2ff;
+    background: #e1f4ff;
     flex: initial;
     transition: all 1.2s; /* [property] [duration] */
 }
@@ -203,8 +203,9 @@ figcaption {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.4;
     font-weight: 400;
-    color: #001e2f;
-    padding: 0.25em;
+    color: #001f2a;
+    padding: 0.5em 0.25em;
+    text-align: center;
 }
 
 section {
