@@ -211,8 +211,8 @@ section {
     width: 80%;
     margin: 1em 5%;
     padding: 1em 5%;
-    background: #e1f4ff;
-    border-top: 2px solid #bfe9ff;
+    background: #f4faff;
+    border: 2px solid #bfe9ff;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
@@ -362,7 +362,7 @@ p {
 dl {
     margin-top: 0;
     padding: 1em;
-    border-bottom: 1px solid #bfe9ff;
+    border-bottom: 2px solid #bfe9ff;
 }
 
 dl:last-child {
